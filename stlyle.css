@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    position: absolute;
+    transition: all linear 0.2s;
+   
+}
+
+h1 {
+    font-size: 9vw;
+   font-weight: 900;
+   color: white
+}
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 12vw;
+    }
+
+    .cursor {
+        height: 14px;
+        width: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 14vw;
+    }
+
+    .cursor {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+
+    #main {
+        cursor: default;
+    }
+}
